@@ -12,7 +12,8 @@ import './CustomerCredit.style';
 import { formatCurrency } from 'SourceUtil/Price';
 import Field from 'SourceComponent/Field';
 
-class CustomerCredit extends PureComponent {
+/** @namespace BNF/CustomerCreditGraphQl/Component/CustomerCredit/Component */
+export class CustomerCredit extends PureComponent {
     static propTypes = {
         cartTotals: PropTypes.shape({}).isRequired,
         availableCustomerCredit: PropTypes.shape({
@@ -32,7 +33,9 @@ class CustomerCredit extends PureComponent {
     }
 
     render() {
-        const { availableCustomerCredit, cartTotals, poNumber, onChange } = this.props;
+        const {
+            availableCustomerCredit, cartTotals, poNumber, onChange
+        } = this.props;
         const { amount, enough_credit } = availableCustomerCredit;
 
         return (
@@ -41,12 +44,12 @@ class CustomerCredit extends PureComponent {
                     { __('Purchase Order Number') }
                 </div>
                 <Field
-                    type="text"
-                    name="po_number"
-                    id="po_number"
-                    placeholder={ __('Purchase Order Number') }
-                    value={poNumber}
-                    onChange={onChange}
+                  type="text"
+                  name="po_number"
+                  id="po_number"
+                  placeholder={ __('Purchase Order Number') }
+                  value={ poNumber }
+                  onChange={ onChange }
                 />
                 <div block="CustomerCredit" className="AvailableCreditBalance">
                     { __('Available Credit Balance:') }
@@ -58,4 +61,4 @@ class CustomerCredit extends PureComponent {
     }
 }
 
-export default middleware(CustomerCredit, 'Component/CustomerCredit/Component');
+export default CustomerCredit;

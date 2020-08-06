@@ -7,9 +7,10 @@
  */
 
 import CustomerCredit from '../component/CustomerCredit';
+
 export const AW_CREDIT_LIMIT = 'aw_credit_limit';
 
-class CheckoutPaymentsPlugin {
+export class CheckoutPaymentsPlugin {
     renderCustomerCredit() {
         const {
             selectedPaymentCode,
@@ -19,29 +20,27 @@ class CheckoutPaymentsPlugin {
 
         return (
             <CustomerCredit
-                setLoading={ setLoading }
-                setDetailsStep={ setDetailsStep }
-                selectedPaymentCode={ selectedPaymentCode }
+              setLoading={ setLoading }
+              setDetailsStep={ setDetailsStep }
+              selectedPaymentCode={ selectedPaymentCode }
             />
         );
     }
 
-    aroundPaymentRenderMap = (originalMember, instance) => {
-        return {
-            ...originalMember,
-            [AW_CREDIT_LIMIT]: this.renderCustomerCredit.bind(instance)
-        }
-    }
+    aroundPaymentRenderMap = (originalMember, instance) => ({
+        ...originalMember,
+        [AW_CREDIT_LIMIT]: this.renderCustomerCredit.bind(instance)
+    });
 }
 
 const {
     aroundPaymentRenderMap
 } = new CheckoutPaymentsPlugin();
 
-const config = {
+export const config = {
     'Component/CheckoutPayments/Component': {
         'member-property': {
-            'paymentRenderMap': [
+            paymentRenderMap: [
                 {
                     position: 100,
                     implementation: aroundPaymentRenderMap

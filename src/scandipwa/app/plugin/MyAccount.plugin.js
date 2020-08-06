@@ -7,10 +7,11 @@
  */
 
 import PropTypes from 'prop-types';
-import MyAccountCreditLimit from '../component/MyAccountCreditLimit'
+import MyAccountCreditLimit from '../component/MyAccountCreditLimit';
+
 export const CREDIT_LIMIT = 'credit-limit';
 
-export class MyAccountComponentPlugin extends ExtensibleClass {
+export class MyAccountComponentPlugin {
     renderMap = originalMember => ({
         ...originalMember,
         [CREDIT_LIMIT]: MyAccountCreditLimit
@@ -25,7 +26,7 @@ export class MyAccountComponentPlugin extends ExtensibleClass {
     });
 }
 
-export class MyAccountContainerPlugin extends ExtensibleClass {
+export class MyAccountContainerPlugin {
     tabMap = originalMember => ({
         ...originalMember,
         [CREDIT_LIMIT]: {

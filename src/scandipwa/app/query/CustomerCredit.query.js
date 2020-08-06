@@ -8,6 +8,7 @@
 
 import { Field } from 'SourceUtil/Query';
 
+/** @namespace BNF/CustomerCreditGraphQl/Query */
 export class CustomerCreditQuery {
     getSavePoNumber(poNumber) {
         return new Field('savePoNumber')
@@ -16,11 +17,11 @@ export class CustomerCreditQuery {
 
     getAvailableCreditBalanceQuery() {
         return new Field('customer_credit')
-        .addFieldList([
-            'amount',
-            'enough_credit'
-        ])
-        .setAlias('availableCustomerCredit');
+            .addFieldList([
+                'amount',
+                'enough_credit'
+            ])
+            .setAlias('availableCustomerCredit');
     }
 
     getCreditTransactionsQuery() {
@@ -38,4 +39,4 @@ export class CustomerCreditQuery {
     }
 }
 
-export default new (middleware(CustomerCreditQuery, 'Query/CustomerCredit'))();
+export default new CustomerCreditQuery();

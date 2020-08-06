@@ -11,7 +11,8 @@ import PropTypes from 'prop-types';
 import './MyAccountCreditLimit.style';
 import isMobile from 'SourceUtil/Mobile';
 
-class MyAccountCreditLimit extends ExtensiblePureComponent {
+/** @namespace BNF/CustomerCreditGraphQl/Component/MyAccountCreditLimit/Component */
+export class MyAccountCreditLimit extends PureComponent {
     static propTypes = {
         creditLimit: PropTypes.arrayOf(
             PropTypes.shape({
@@ -58,7 +59,7 @@ class MyAccountCreditLimit extends ExtensiblePureComponent {
                         <td block="hidden-mobile">{ purchase_order }</td>
                         <td block="hidden-mobile">{ comment }</td>
                     </tr>
-                )
+                );
             })
         );
     }
@@ -101,7 +102,7 @@ class MyAccountCreditLimit extends ExtensiblePureComponent {
                             <div className="OverallData">{ credit_limit }</div>
                         </div>
                     </div>
-                )
+                );
             })
         );
     }
@@ -143,4 +144,4 @@ class MyAccountCreditLimit extends ExtensiblePureComponent {
     }
 }
 
-export default middleware(MyAccountCreditLimit, 'Component/MyAccountCreditLimit/Component');
+export default MyAccountCreditLimit;

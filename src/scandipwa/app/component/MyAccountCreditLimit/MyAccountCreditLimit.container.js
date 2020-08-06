@@ -9,17 +9,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import DataContainer from 'SourceUtil/Request/DataContainer';
+import { fetchQuery } from 'SourceUtil/Request';
 import MyAccountCreditLimit from './MyAccountCreditLimit.component';
 import CustomerCreditQuery from '../../query/CustomerCredit.query';
-import { fetchQuery } from 'SourceUtil/Request';
 
-class MyAccountCreditLimitContainer extends DataContainer {
+/** @namespace BNF/CustomerCreditGraphQl/Component/MyAccountCreditLimit/Container */
+export class MyAccountCreditLimitContainer extends DataContainer {
     state = {
         creditLimit: []
     };
 
     componentDidMount() {
         fetchQuery(CustomerCreditQuery.getCreditTransactionsQuery()).then(
+            /** @namespace BNF/CustomerCreditGraphQl/Component/MyAccountCreditLimit/Container/fetchQueryThen */
             ({ creditLimit }) => this.setState({ creditLimit })
         );
     }
@@ -27,12 +29,10 @@ class MyAccountCreditLimitContainer extends DataContainer {
     render() {
         return (
             <MyAccountCreditLimit
-                { ...this.state }
+              { ...this.state }
             />
-        )
+        );
     }
 }
 
-export default connect(null, null)(
-    middleware (MyAccountCreditLimitContainer, 'BNF/CustomerCreditGraphQl/Component/MyAccountCreditLimit/Container')
-);
+export default MyAccountCreditLimitContainer;

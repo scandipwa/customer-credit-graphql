@@ -1,6 +1,6 @@
 /**
- * @category  Budo
- * @package   Budo_CustomerCreditGraphQl
+ * @category  ScandiPWA
+ * @package   ScandiPWA_CustomerCreditGraphQl
  * @author    Vitalijs Visnakovs <info@scandiweb.com>
  * @copyright Copyright (c) 2020 Scandiweb, Inc (https://scandiweb.com)
  * @license   http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0 (OSL-3.0)
@@ -14,13 +14,13 @@ import PropTypes from 'prop-types';
 import CustomerCreditQuery from '../../query/CustomerCredit.query';
 import CustomerCredit from './CustomerCredit.component';
 
-/** @namespace BNF/CustomerCreditGraphQl/Component/CustomerCredit/Container/mapStateToProps */
+/** @namespace ScandiPWA/CustomerCreditGraphQl/Component/CustomerCredit/Container/mapStateToProps */
 export const mapStateToProps = state => ({
     cartTotals: state.CartReducer.cartTotals,
     orderID: PropTypes.string.isRequired
 });
 
-/** @namespace BNF/CustomerCreditGraphQl/Component/CustomerCredit/Container */
+/** @namespace ScandiPWA/CustomerCreditGraphQl/Component/CustomerCredit/Container */
 export class CustomerCreditContainer extends DataContainer {
     state = {
         availableCustomerCredit: {},
@@ -55,7 +55,7 @@ export class CustomerCreditContainer extends DataContainer {
         fetchQuery(
             [CustomerCreditQuery.getAvailableCreditBalanceQuery()]
         ).then(
-            /** @namespace BNF/CustomerCreditGraphQl/Component/CustomerCredit/Container/fetchQueryThen */
+            /** @namespace ScandiPWA/CustomerCreditGraphQl/Component/CustomerCredit/Container/fetchQueryThen */
             ({ availableCustomerCredit }) => this.setState({ availableCustomerCredit })
         );
     }

@@ -1,6 +1,6 @@
 /**
- * @category  Budo
- * @package   Budo_CustomerCreditGraphQl
+ * @category  ScandiPWA
+ * @package   ScandiPWA_CustomerCreditGraphQl
  * @author    Vitalijs Visnakovs <info@scandiweb.com>
  * @copyright Copyright (c) 2020 Scandiweb, Inc (https://scandiweb.com)
  * @license   http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0 (OSL-3.0)
@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import './MyAccountCreditLimit.style';
 import isMobile from 'SourceUtil/Mobile';
 
-/** @namespace BNF/CustomerCreditGraphQl/Component/MyAccountCreditLimit/Component */
+/** @namespace ScandiPWA/CustomerCreditGraphQl/Component/MyAccountCreditLimit/Component */
 export class MyAccountCreditLimit extends PureComponent {
     static propTypes = {
         creditLimit: PropTypes.arrayOf(

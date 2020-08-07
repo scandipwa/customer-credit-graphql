@@ -8,8 +8,8 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import DataContainer from 'SourceUtil/Request/DataContainer';
-import { fetchMutation, fetchQuery } from 'SourceUtil/Request';
+import DataContainer from 'Util/Request/DataContainer';
+import { fetchMutation, fetchQuery } from 'Util/Request';
 import PropTypes from 'prop-types';
 import CustomerCreditQuery from '../../query/CustomerCredit.query';
 import CustomerCredit from './CustomerCredit.component';

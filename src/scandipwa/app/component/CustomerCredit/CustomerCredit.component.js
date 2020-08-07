@@ -9,8 +9,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './CustomerCredit.style';
-import { formatCurrency } from 'SourceUtil/Price';
-import Field from 'SourceComponent/Field';
+import { formatCurrency } from 'Util/Price';
+import Field from 'Component/Field';
 
 /** @namespace ScandiPWA/CustomerCreditGraphQl/Component/CustomerCredit/Component */
 export class CustomerCredit extends PureComponent {

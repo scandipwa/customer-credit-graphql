@@ -6,7 +6,7 @@
  * @license   http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0 (OSL-3.0)
  */
 
-import { Field } from 'SourceUtil/Query';
+import { Field } from 'Util/Query';
 
 /** @namespace ScandiPWA/CustomerCreditGraphQl/Query */
 export class CustomerCreditQuery {

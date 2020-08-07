@@ -9,7 +9,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './MyAccountCreditLimit.style';
-import isMobile from 'SourceUtil/Mobile';
+import isMobile from 'Util/Mobile';
 
 /** @namespace ScandiPWA/CustomerCreditGraphQl/Component/MyAccountCreditLimit/Component */
 export class MyAccountCreditLimit extends PureComponent {

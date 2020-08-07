@@ -7,9 +7,8 @@
  */
 
 import React from 'react';
-import { connect } from 'react-redux';
-import DataContainer from 'SourceUtil/Request/DataContainer';
-import { fetchQuery } from 'SourceUtil/Request';
+import DataContainer from 'Util/Request/DataContainer';
+import { fetchQuery } from 'Util/Request';
 import MyAccountCreditLimit from './MyAccountCreditLimit.component';
 import CustomerCreditQuery from '../../query/CustomerCredit.query';
 

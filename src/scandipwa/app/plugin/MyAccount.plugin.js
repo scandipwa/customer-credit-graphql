@@ -49,7 +49,7 @@ export default {
                 }
             ]
         },
-        'static-property': { // After update to newer PWA version (beta >4) it should be static-member
+        'static-member': {
             propTypes: [
                 {
                     position: 100,
@@ -59,7 +59,7 @@ export default {
         }
     },
     'Component/MyAccountTabList/Component': {
-        'static-property': { // After update to newer PWA version (beta >4) it should be static-member
+        'static-member': {
             propTypes: [
                 {
                     position: 100,

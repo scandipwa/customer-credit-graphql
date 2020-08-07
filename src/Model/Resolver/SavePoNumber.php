@@ -1,13 +1,13 @@
 <?php
 /**
- * @category  Budo
- * @package   Budo_CustomerCreditGraphQl
+ * @category  ScandiPWA
+ * @package   ScandiPWA_CustomerCreditGraphQl
  * @author    Vitalijs Visnakovs <info@scandiweb.com>
  * @copyright Copyright (c) 2020 Scandiweb, Inc (https://scandiweb.com)
  * @license   http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0 (OSL-3.0)
  */
 
-namespace BNF\CustomerCreditGraphQl\Model\Resolver;
+namespace ScandiPWA\CustomerCreditGraphQl\Model\Resolver;
 
 use Aheadworks\CreditLimit\Api\Data\TransactionEntityInterface;
 use Magento\Framework\GraphQl\Config\Element\Field;
@@ -22,7 +22,7 @@ use Psr\Log\LoggerInterface;
 /**
  * Class SavePoNumber
  *
- * @package BNF\CustomerCreditGraphQl\Model\Resolver
+ * @package ScandiPWA\CustomerCreditGraphQl\Model\Resolver
  */
 class SavePoNumber implements ResolverInterface
 {

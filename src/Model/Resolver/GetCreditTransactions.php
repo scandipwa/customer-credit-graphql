@@ -1,13 +1,13 @@
 <?php
 /**
- * @category  Budo
- * @package   Budo_CustomerCreditGraphQl
+ * @category  ScandiPWA
+ * @package   ScandiPWA_CustomerCreditGraphQl
  * @author    Vitalijs Visnakovs <info@scandiweb.com>
  * @copyright Copyright (c) 2020 Scandiweb, Inc (https://scandiweb.com)
  * @license   http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0 (OSL-3.0)
  */
 
-namespace BNF\CustomerCreditGraphQl\Model\Resolver;
+namespace ScandiPWA\CustomerCreditGraphQl\Model\Resolver;
 
 use Aheadworks\CreditLimit\Model\Source\Transaction\Action;
 use Magento\Framework\Exception\LocalizedException;
@@ -25,7 +25,7 @@ use Psr\Log\LoggerInterface;
 /**
  * Class GetCreditTransactions
  *
- * @package BNF\CustomerCreditGraphQl\Model\Resolver
+ * @package ScandiPWA\CustomerCreditGraphQl\Model\Resolver
  */
 class GetCreditTransactions implements ResolverInterface
 {

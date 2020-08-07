@@ -1,5 +1,5 @@
 {
-    "name": "scandipwa/customer-credit-graph-ql",
+    "name": "scandipwa/customer-credit-graphql",
     "description": "Customer Credit extension for ScandiPWA",
     "type": "library",
     "license": "OSL-3.0",

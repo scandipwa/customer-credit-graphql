@@ -3,11 +3,35 @@
     "description": "Customer Credit extension for ScandiPWA",
     "type": "library",
     "license": "OSL-3.0",
+    "keywords": [
+        "scandipwa",
+        "customer",
+        "credit",
+        "customer-credit",
+        "graphql"
+    ],
+    "support": {
+        "email": "info@scandiweb.com"
+    },
     "authors": [
         {
             "name": "Vitalijs Visnakovs",
             "email": "vitalijs.visnakovs@scandiweb.com"
+        },
+        {
+            "name": "Jegors Batovs",
+            "email": "yegor@scandipwa.com"
         }
     ],
-    "require": {}
+    "require": {
+        "magento/magento2-base": "^2.3.5"
+    },
+    "autoload": {
+        "files": [
+            "src/registration.php"
+        ],
+        "psr-4": {
+            "ScandiPWA\\CustomerCreditGraphQl\\": "src/"
+        }
+    }
 }

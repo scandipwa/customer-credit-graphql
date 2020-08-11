@@ -1,3 +1,7 @@
+# For people who learn from this extension
+
+> **Note** that you still need the `scandipwa/index.js` file that is mentioned in the documentation. It can get lost (as in this extension) since the NEXT release, which at the moment (11 AUG 2020) is not released.
+
 # Aheadworks Customer Credit extension support for ScandiPWA
 
 > **Note:** To use this functionality you must have the corresponding AheadWorks extension.
